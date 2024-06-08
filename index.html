@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinosaurus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <img src="logo-jurasica-500.png" alt="Dinosaur Icon">
+    <h2>Spinosaurus</h2>
+</header>
+<nav>
+    <a href="#"></a>
+    <a href="#"></a>
+    <a href="#"></a>
+</nav>
+<main>
+    <div class="image-container">
+        <img src="phndCfiJRnB3GWUiRB62kf-1200-80.jpg" alt="Balaur 1 Icon">
+        <img src="download.jpg" alt="Balaur 2 Icon">
+        <img src="istockphoto-502382343-612x612.jpg" alt="Balaur 4 Icon">
+        <img src="FSAC-KK-11888.jpg" alt="Balaur 3 Icon">
+    </div>
+    <h2>Română</h2>
+    <button class="button" id="play-romana">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                  fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="romana-text">Spinosaurus-ul, supranumit "Șopârla cu spini" a fost numit de către Ernst Stromer în anul 1915.
+        Acest dinozaur era carnivor, avea o lungime estimată între 12,6 și 18 metri și a trăit de la Albian la
+        Cenomanian din Cretacic. Spinosaurus-ul era regăsit în Africa de Nord, în special Epypt în Regiunea Bahariya și
+        Maroc. Până în prezent s-au descoperit cel puțin 6 exemplare parțiale ale craniului, mandibulei, coloanei
+        vertebrale și alte resturi de fragmente post craniene. Cu toate acestea, dinții sunt cel mai des
+        descoperiți.</p>
+
+    <h2>English</h2>
+    <button class="button" id="play-engleza">
+        <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px">
+            <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                  fill="#036307"></path>
+        </svg>
+    </button>
+    <p id="engleza-text">The Spinosaurus, nicknamed the "Spiny Lizard" was named by Ernst Stromer in 1915.
+        This dinosaur was carnivorous, had an estimated length of between 12.6 and 18 meters and lived from the Albian to
+        Cenomanian from the Cretaceous. The Spinosaurus was found in North Africa, especially Epypt in the Bahariya Region and
+        Morocco. So far, at least 6 partial specimens of the skull, mandible, spine
+        vertebrae and other remains of post-cranial fragments have been discovered. However, the teeth are discovered the most common
+        </p><br>
+</main>
+<footer>
+    <script>
+        const romanaAudio = new Audio('Spinosaurus ul supra.m4a');
+        const englezaAudio = new Audio('The Spinosaurus nickname 1.wav');
+
+        const playRomana = document.getElementById('play-romana');
+        const romanaText = document.getElementById('romana-text');
+        const playEngleza = document.getElementById('play-engleza');
+        const englezaText = document.getElementById('engleza-text');
+
+        playRomana.addEventListener('click', () => {
+            if (romanaAudio.paused) {
+                romanaAudio.play();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                romanaAudio.pause();
+                playRomana.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+
+        playEngleza.addEventListener('click', () => {
+            if (englezaAudio.paused) {
+                englezaAudio.play();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg>';
+            } else {
+                englezaAudio.pause();
+                playEngleza.innerHTML = '<svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="26px"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="currentColor"></path></svg> Pause';
+            }
+        });
+    </script>
+    &copy; 2024 Jurasica Adventure Park. All rights reserved.
+</footer>
+
+</body>
+</html>
